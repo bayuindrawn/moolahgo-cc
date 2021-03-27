@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Users;
 use Illuminate\Http\Request;
 
 class ReferralCodeController extends Controller
@@ -17,9 +19,9 @@ class ReferralCodeController extends Controller
 
     public function getReferralCode(Request $request)
     {
-        $output = [
-            'refferal_code' => $request->input('refferal_code')
-        ];
+        $payload    = $request->input();
+        $output     = Users::getRefCode($payload);
+        
         return $this->responseJson(200, 'Request sukses', $output);
     }
 }
