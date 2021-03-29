@@ -48,7 +48,7 @@ class Users extends Model implements AuthenticatableContract, AuthorizableContra
         try {
 
             $validator = Validator::make($payload, [
-                'refferal_code' => 'required'
+                'referral_code' => 'required'
             ]);
 
             if ($validator->fails()) {
@@ -57,7 +57,7 @@ class Users extends Model implements AuthenticatableContract, AuthorizableContra
 
             } else {
                 
-                $selectedData = self::where('refferal_code', '=', $payload['refferal_code'])->firstOrFail();
+                $selectedData = self::where('referral_code', '=', $payload['referral_code'])->firstOrFail();
                 $data = ['success' => $selectedData];
 
             }

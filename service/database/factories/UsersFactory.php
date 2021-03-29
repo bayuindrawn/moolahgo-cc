@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Users;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class UsersFactory extends Factory
 {
@@ -27,7 +28,7 @@ class UsersFactory extends Factory
             'email' => $this->faker->unique()->safeEmail,
             'password' => $this->faker->passthrough('123456789'),
             'phone' => $this->faker->phoneNumber,
-            'refferal_code' => substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ'),1,6),
+            'referral_code' => strtoupper(Str::random(6)),
             'address' => $this->faker->address,
             'photo' => $this->faker->imageUrl(),
         ];

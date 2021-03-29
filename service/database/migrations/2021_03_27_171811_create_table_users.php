@@ -20,7 +20,7 @@ class CreateTableUsers extends Migration
             $table->string('email', 100);
             $table->string('password', 100)->nullable()->default('NULL');
             $table->string('phone', 100)->nullable()->default('NULL');
-            $table->string('refferal_code', 100);
+            $table->string('referral_code', 100);
             $table->text('address')->nullable();
             $table->text('photo')->nullable();
             $table->timestamps();
