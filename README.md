@@ -1,7 +1,7 @@
 # codechallenge-moolahgo 
-author : bayu indrawan
-
-## API Service Lumen PHP Framework
+author  : Bayu Indrawan
+service : Php Lumen Framefork
+web app : Vue Js
 
 ### Server Requirements
 
