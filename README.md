@@ -1,6 +1,6 @@
 # codechallenge-moolahgo 
 * Author  : Bayu Indrawan
-* Micro Service : Php Lumen Framefork
+* Micro Service : Php Lumen Framework
 * Web Client : Vue Js
 
 ### Server Requirements
